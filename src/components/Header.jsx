@@ -18,6 +18,10 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import SportsBaseballIcon from "@mui/icons-material/SportsBaseball";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CloseIcon from "@mui/icons-material/Close"; 
+import SportsKabaddiIcon from '@mui/icons-material/SportsKabaddi';
+import InstallMobileIcon from '@mui/icons-material/InstallMobile';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 const Header = () => {
   const [language, setLanguage] = useState("EN"); // Default language
@@ -72,7 +76,7 @@ const Header = () => {
                 alignItems: "center",
               }}
             >
-              <SportsEsportsIcon sx={{ fontSize: 24, mr: 0.5 }} />
+              <EmojiEventsIcon sx={{ fontSize: 24, mr: 0.5 }} />
               Dream11
             </Typography>
           </Box>
@@ -80,20 +84,20 @@ const Header = () => {
           <Select
             value={language}
             onChange={handleLanguageChange}
-            size="large"
+            size="large"   
             sx={{
               width: "150px",
               height: "45px",
               backgroundColor: "#580d0b",
-              border: "2px solid rgb(96, 28, 24)", // Add border
-              borderRadius: "20px", // Rounded corners
-              color: "white", // Set text color
-              fontSize: "14px", // Font size
+              border: "2px solid rgb(96, 28, 24)", 
+              borderRadius: "20px", 
+              color: "white", 
+              fontSize: "14px", 
               "& .MuiSelect-select": {
-                padding: "10px", // Inner padding
+                padding: "10px", 
               },
               "& .MuiOutlinedInput-notchedOutline": {
-                border: "none", // Remove outline
+                border: "none", 
               },
             }}
           >
@@ -121,12 +125,15 @@ const Header = () => {
             border: "2px solid #B15656",
             borderRadius:"20px",
             color:"white",
+            position: 'absolute',
+            marginLeft:'10px',
+            px:'30px'
           }}
         >
           <List>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0 }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px'}}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1 , color:"white"}}>
                 <SportsBaseballIcon />
@@ -138,7 +145,7 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0 }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
                 <SportsBaseballIcon />
@@ -150,10 +157,10 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0 }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white"}}>
-                <SportsBaseballIcon />
+                <SportsKabaddiIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Kabaddi" />
               <ListItemSecondaryAction>
@@ -162,12 +169,60 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0 }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+            >
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+                <InstallMobileIcon />
+              </ListItemIcon>
+              <ListItemText primary="App Download" />
+              <ListItemSecondaryAction>
+                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem
+              button
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
-              <ListItemText primary="App Download" />
+              <ListItemText primary="Fantasy Sports" />
+              <ListItemSecondaryAction>
+                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem
+              button
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+            >
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+                <MilitaryTechIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dream11 Winners" />
+              <ListItemSecondaryAction>
+                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem
+              button
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+            >
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+                <MilitaryTechIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dream11 Private Contest" />
+              <ListItemSecondaryAction>
+                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem
+              button
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+            >
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+                <MilitaryTechIcon />
+              </ListItemIcon>
+              <ListItemText primary="IPL Fantasy" />
               <ListItemSecondaryAction>
                 <ArrowForwardIcon sx={{ color: "#B15656" }} />
               </ListItemSecondaryAction>
