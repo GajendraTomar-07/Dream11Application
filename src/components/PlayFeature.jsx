@@ -48,17 +48,19 @@ export default function PlayFeature() {
             </div>
             <div className='middle-user'>
               <div className='div-container1'>
-                <Typography variant="subtitle1">
+                <Typography variant="caption">
                   <b>Mega Contest Winner</b>
                 </Typography>
+                <br/>
                 <Typography variant="caption" sx={{ opacity: '0.8' }}>
                   MI vs RR
                 </Typography>
               </div>
               <div className='div-container2'>
-                <Txt variant="button">
+                <Txt variant="caption">
                   ₹1 Crore
                 </Txt>
+                <br/>
                 <Typography variant="caption" sx={{ opacity: '0.8' }}>
                   WINNINGS
                 </Typography>
@@ -86,9 +88,10 @@ export default function PlayFeature() {
             </div>
             <div className='middle-user'>
               <div className='div-container1'>
-                <Typography variant="subtitle1">
+                <Typography variant="caption">
                   <b>Mega Contest Winner</b>
                 </Typography>
+                <br/>
                 <Typography variant="caption" sx={{ opacity: '0.8' }}>
                   PBKS VS DC
                 </Typography>
@@ -97,6 +100,7 @@ export default function PlayFeature() {
                 <Txt variant="button">
                   ₹1 Crore
                 </Txt>
+                <br/>
                 <Typography variant="caption" sx={{ opacity: '0.8' }}>
                   WINNINGS
                 </Typography>
@@ -125,9 +129,10 @@ export default function PlayFeature() {
             </div>
             <div className='middle-user'>
               <div className='div-container1'>
-                <Typography variant="subtitle1">
+                <Typography variant="caption">
                   <b>Mega Contest Winner</b>
                 </Typography>
+                <br/>
                 <Typography variant="caption" sx={{ opacity: '0.8' }}>
                   GT vs MI
                 </Typography>
@@ -136,6 +141,7 @@ export default function PlayFeature() {
                 <Txt variant="button">
                   ₹1 Crore
                 </Txt>
+                <br/>
                 <Typography variant="caption" sx={{ opacity: '0.8' }}>
                   WINNINGS
                 </Typography>
@@ -240,7 +246,7 @@ const CardContainer = styled(Card)({
 const BoxRating = styled(Box)({
   width: '80%',
   background: ' #f5f5f5',
-  height: '325px',
+  height: '332px',
   margin: '0 auto',
   display: 'flex',
   flexDirection: 'row',
