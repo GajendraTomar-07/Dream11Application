@@ -5,6 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import FaqSection from './components/FaqSection';
+import OfficialPartner from './components/OfficialPartner';
+import PlayFeature from './components/PlayFeature';
+import FantasyPage from './components/FantasyPage';
+import FooterPage from './components/FooterPage';
 
 function App() {
   return (
@@ -12,8 +16,11 @@ function App() {
     <>
     <Header/>
     <HeroSection/>
+    <OfficialPartner/>
+    <PlayFeature/>
+    <FantasyPage/>
     <FaqSection/>
-    
+    <FooterPage/>
     </>
   );
 }

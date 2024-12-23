@@ -47,7 +47,7 @@ const HeroSection = () => {
   return (
      <Grid
        sx={{
-        width: "100%",
+        width: "auto",
         height: "100vh",
         backgroundImage: `url(${Destop2024})`,
         // backgroundSize: "cover",
@@ -80,7 +80,8 @@ const HeroSection = () => {
           <img
             src={isSmallScreen ? Desktop4 : Desktop1}
             alt="desktop"
-            style={{ width: "50%", height: "85vh",margin:"auto",  marginTop: "80px", }}
+            style={{ width: "50%", height: "85vh"
+              ,margin:"auto",  marginTop: "80px", }}
           />
         </div>
         <div 
