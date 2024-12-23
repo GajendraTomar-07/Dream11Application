@@ -12,6 +12,7 @@ import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import SportsHockeyIcon from '@mui/icons-material/SportsHockey';
 import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
 import SportsHandballIcon from '@mui/icons-material/SportsHandball';
+import FaqSection from './FaqSection';
 
 export default function FantasyPage() {
 
@@ -51,172 +52,176 @@ export default function FantasyPage() {
   }
 
   return (
-    <BoxContainer component="section">
-      <Text variant="h6">
-        <strong>Popular </strong> <b className='Header-clr'>Fantasy Sports</b><strong> in India</strong>
-      </Text>
+    <>
+      <BoxContainer component="section">
+        <Text variant="h6">
+          <strong>Popular </strong> <b className='Header-clr'>Fantasy Sports</b><strong> in India</strong>
+        </Text>
 
-      <ParaTxt variant="body2" sx={{ opacity: '0.7' }}>
-        <a href='#' className='col-p-tag'>Fantasy sports</a> is a platform for online gaming fantasy players create
-        a virtual team of real sports players. Dream11 gives you plenty of options to
-        create your fantasy sports team for the sport you would like to play and win!
-        Here are the <a href='#' className='col-p-tag'>most popular fantasy sports</a> leagues to play.
-      </ParaTxt>
+        <ParaTxt variant="body2" sx={{ opacity: '0.7' }}>
+          <a href='#' className='col-p-tag'>Fantasy sports</a> is a platform for online gaming fantasy players create
+          a virtual team of real sports players. Dream11 gives you plenty of options to
+          create your fantasy sports team for the sport you would like to play and win!
+          Here are the <a href='#' className='col-p-tag'>most popular fantasy sports</a> leagues to play.
+        </ParaTxt>
 
-      <Boxs>
-        <Slider {...settings}>
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+        <Boxs>
+          <Slider {...settings}>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <HeadContainer>
-                  <SportsBaseballIcon sx={{ mb: -0.6 }}/> Fantasy Cricket
-                </HeadContainer>
-                 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  Play one of the biggest cricket leagues, the TATA IPL 2024. Use your
-                  cricketing knowledge and join leagues like thr Big Bash League, Caribbean
-                  Premier League and many others.
-                </Typography>
+                  <HeadContainer>
+                    <SportsBaseballIcon sx={{ mb: -0.6 }} /> Fantasy Cricket
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    Play one of the biggest cricket leagues, the TATA IPL 2024. Use your
+                    cricketing knowledge and join leagues like thr Big Bash League, Caribbean
+                    Premier League and many others.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsSoccerIcon sx={{ mb: -0.6 }}/> Fantasy Football
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  Fantasy Football is a game in which participants created a fictional Team
-                  of real-life football players and score points based on their actual performance
-                  on the field of play.
-                </Typography>
+                  <HeadContainer>
+                    <SportsSoccerIcon sx={{ mb: -0.6 }} /> Fantasy Football
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    Fantasy Football is a game in which participants created a fictional Team
+                    of real-life football players and score points based on their actual performance
+                    on the field of play.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsKabaddiIcon sx={{ mb: -0.6 }}/> Fantasy Kabaddi
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  Fantasy Kabaddi is a skill-based game of India's famous sport-Kabaddi.
-                  Fantasy Kabaddi on Dream11 brings a new perspective to fantasy Kabaddi
-                  in the world of fantasy sports.
-                </Typography>
+                  <HeadContainer>
+                    <SportsKabaddiIcon sx={{ mb: -0.6 }} /> Fantasy Kabaddi
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    Fantasy Kabaddi is a skill-based game of India's famous sport-Kabaddi.
+                    Fantasy Kabaddi on Dream11 brings a new perspective to fantasy Kabaddi
+                    in the world of fantasy sports.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsBaseballIcon  sx={{ mb: -0.6 }}/> Fantasy Baseball
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  Fantasy Baseball has different formats and rules and therefore there are several
-                  types of fantasy contests. Join fantasy constests for the most popular
-                  Baseball tournaments on Dream11.
-                </Typography>
+                  <HeadContainer>
+                    <SportsBaseballIcon sx={{ mb: -0.6 }} /> Fantasy Baseball
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    Fantasy Baseball has different formats and rules and therefore there are several
+                    types of fantasy contests. Join fantasy constests for the most popular
+                    Baseball tournaments on Dream11.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsBasketballIcon  sx={{ mb: -0.6 }}/> Fantasy Basketball
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  Get ready to play fantasy basketball across popular basketball leagues
-                  and tournaments. Participate in daily fantasy matches, create or join NBA
-                  contests and win on Dream11.
-                </Typography>
+                  <HeadContainer>
+                    <SportsBasketballIcon sx={{ mb: -0.6 }} /> Fantasy Basketball
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    Get ready to play fantasy basketball across popular basketball leagues
+                    and tournaments. Participate in daily fantasy matches, create or join NBA
+                    contests and win on Dream11.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsHockeyIcon  sx={{ mb: -0.6 }}/> Fantasy Hockey
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  In fantasy hockey, your mission is to pick a team that is better than others, Create
-                  your team for the most popular hockey leagues, namely Men's Pro Hockey League
-                  and many more.
-                </Typography>
+                  <HeadContainer>
+                    <SportsHockeyIcon sx={{ mb: -0.6 }} /> Fantasy Hockey
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    In fantasy hockey, your mission is to pick a team that is better than others, Create
+                    your team for the most popular hockey leagues, namely Men's Pro Hockey League
+                    and many more.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsVolleyballIcon  sx={{ mb: -0.6 }}/> Fantasy Volleyball
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  If you love fantasy sports and volleyball, fantasy volleyball is like a cherry
-                  on top of the cake. Fantasy Volleyball helps you wim=n rewards and enjoy the sport
-                  as well.
-                </Typography>
+                  <HeadContainer>
+                    <SportsVolleyballIcon sx={{ mb: -0.6 }} /> Fantasy Volleyball
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    If you love fantasy sports and volleyball, fantasy volleyball is like a cherry
+                    on top of the cake. Fantasy Volleyball helps you wim=n rewards and enjoy the sport
+                    as well.
+                  </Typography>
 
-          <div className='slider-conatiner'>
-            <Cards>
-              <CardContent>
+                </CardContent>
+              </Cards>
+            </div>
 
-                <HeadContainer>
-                  <SportsHandballIcon  sx={{ mb: -0.6 }}/> Fantasy Handball
-                </HeadContainer>
+            <div className='slider-conatiner'>
+              <Cards>
+                <CardContent>
 
-                <Typography variant="body2" sx={{mt: 3}}>
-                  Play Fantasy Handball and participate in daily contests across various professional
-                  handball leagues, and international tournaments available on Dream11. Get ready to play now!
-                </Typography>
+                  <HeadContainer>
+                    <SportsHandballIcon sx={{ mb: -0.6 }} /> Fantasy Handball
+                  </HeadContainer>
 
-              </CardContent>
-            </Cards>
-          </div>
+                  <Typography variant="body2" sx={{ mt: 3 }}>
+                    Play Fantasy Handball and participate in daily contests across various professional
+                    handball leagues, and international tournaments available on Dream11. Get ready to play now!
+                  </Typography>
 
-        </Slider>
-      </Boxs>
+                </CardContent>
+              </Cards>
+            </div>
 
-    </BoxContainer>
+          </Slider>
+        </Boxs>
+
+      </BoxContainer>
+      <FaqSection />
+    </>
   )
 }
 
 const BoxContainer = styled(Box)({
   background: ' #f5f5f5',
+  paddingBottom: '40px'
 })
 
 const Text = styled(Typography)({
@@ -273,7 +278,7 @@ const Cards = styled(Card)({
   position: 'relative',
   overflow: 'visible',
   '@media (min-width: 300px) and (max-width: 800px)': {
-    height: 'auto', 
+    height: 'auto',
     margin: '0px 10px',
     width: 'auto'
   }

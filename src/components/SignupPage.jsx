@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import GIFLogin from '../assets/output-onlinegiftools (1).gif';
+import GIFLogin from '../assets/output-onlinegiftools1.gif';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";

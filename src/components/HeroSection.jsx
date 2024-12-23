@@ -4,25 +4,26 @@ import Destop2024 from "../assets/Destop2024.webp";
 import Desktop1 from "../assets/Desktop1.webp";
 import Desktop2 from "../assets/Desktop2.webp";
 import Desktop3 from "../assets/Desktop3.webp";
-import Desktop4 from "../assets/desktop4.webp"
+import Desktop4 from "../assets/desktop4.webp";
+import Desktop5 from '../assets/Desktop5.webp';
 import Slider from "react-slick";
 import "./HeroSection.css";
 import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import OfficialPartner from "./OfficialPartner";
 
 
 const HeroSection = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      // once: true,
-    });
+    // AOS.init({
+    //   duration: 1000,
+    //   // once: true,
+    // });
 
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 767);
@@ -38,6 +39,7 @@ const HeroSection = () => {
 
   const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -45,80 +47,81 @@ const HeroSection = () => {
   };
 
   return (
-     <Grid
-       sx={{
-        width: "auto",
-        height: "100vh",
-        backgroundImage: `url(${Destop2024})`,
-        // backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+    <>
+      <Grid
+        sx={{
+          height: "105vh",
+          backgroundImage: `url(${Destop2024})`,
+          // backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           '@media (max-width: 600px)': {
-          backgroundSize: 'auto',
-          backgroundPosition: 'center top',
-        },
-        '@media (max-width: 960px)': {
-          backgroundSize: 'cover',
-        },
-        "@media (max-width: 480px)": {
-          backgroundImage: "none",
-          backgroundColor: "#050c1f", 
-        },
-      }}
-     >
-      <Grid item>
-    <Box  >
-      <Slider {...settings} >
-        <div  
-        data-aos="zoom-in"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={isSmallScreen ? Desktop4 : Desktop1}
-            alt="desktop"
-            style={{ width: "50%", height: "85vh"
-              ,margin:"auto",  marginTop: "80px", }}
-          />
-        </div>
-        <div 
-          data-aos="zoom-in"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={Desktop2}
-            alt="desktop"
-            style={{ width: "50%", height: "85vh",margin:"auto",  marginTop: "80px", }}
-          />
-        </div>
-        <div  
-         data-aos="zoom-in"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={Desktop3}
-            alt="desktop"
-            style={{ width: "50%", height: "85vh",margin:"auto",  marginTop: "80px",}}
-          />
-        </div>
+            backgroundSize: 'auto',
+            backgroundPosition: 'center top',
+          },
+          '@media (max-width: 960px)': {
+            backgroundSize: 'cover',
+          },
+          "@media (max-width: 480px)": {
+            backgroundImage: `url(${Destop2024})`,
+            backgroundColor: "#050c1f",
+          },
+        }}
+      >
+        <Grid item>
+          <Box  >
+            <Slider {...settings} >
+              <div
+                data-aos="zoom-in"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={isSmallScreen ? Desktop4 : Desktop1}
+                  alt="desktop"
+                  className="Img-header"
+                />
+              </div>
+              <div
+                data-aos="zoom-in"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={Desktop2}
+                  alt="desktop"
+                  className="Img-header1"
+                />
+              </div>
+              <div
+                data-aos="zoom-in"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={isSmallScreen ? Desktop5 : Desktop3}
+                  alt="desktop"
+                  className="Img-header2"
+                />
+              </div>
 
-        
-       
-      </Slider>
-    </Box>
+
+
+            </Slider>
+          </Box>
+        </Grid>
       </Grid>
-     </Grid>
+      <OfficialPartner />
+    </>
   );
 };
 

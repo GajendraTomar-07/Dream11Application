@@ -13,19 +13,19 @@ import {
   ListItemIcon,
   ListItemSecondaryAction,
 } from "@mui/material";
-import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import SportsBaseballIcon from "@mui/icons-material/SportsBaseball";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import CloseIcon from "@mui/icons-material/Close"; 
+import CloseIcon from "@mui/icons-material/Close";
 import SportsKabaddiIcon from '@mui/icons-material/SportsKabaddi';
 import InstallMobileIcon from '@mui/icons-material/InstallMobile';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import AppLogo from '../assets/footer_logo.png'
+import HeroSection from "./HeroSection";
 
 const Header = () => {
-  const [language, setLanguage] = useState("EN"); // Default language
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar state
+  const [language, setLanguage] = useState("EN");
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
@@ -35,17 +35,19 @@ const Header = () => {
     setIsSidebarOpen((prev) => !prev);
   };
 
+  const handleClose = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
     <>
       <AppBar
         position="static"
         sx={{
           backgroundColor: {
-            xs: "#580d0b", // Orange for screens smaller than 768px
-            sm: "black", // Dark for screens 768px and above
+            xs: "#00754a",
+            sm: "black",
           },
-          paddingX: 1, // Add horizontal padding
-          paddingY: 1, // Add vertical padding
         }}
       >
         <Toolbar
@@ -55,87 +57,79 @@ const Header = () => {
             alignItems: "center",
           }}
         >
-          {/* Left Section: Menu and Logo */}
+
           <Box
             sx={{ display: "flex", alignItems: "center", gap: 3, padding: 1 }}
           >
-           <IconButton onClick={toggleSidebar}>
-              {/* Conditionally render MenuOpenIcon or CloseIcon */}
+            <IconButton onClick={toggleSidebar}>
+
               {isSidebarOpen ? (
-                <CloseIcon sx={{ color: "#fff" }} />
+                <CloseIcon sx={{ color: "#fff", backgroundColor: "#195226", p: 0.5, borderRadius: '50px' }} />
               ) : (
-                <MenuOpenIcon sx={{ color: "#fff" }} />
+                <MenuOpenIcon sx={{ color: "#fff", backgroundColor: "#195226", p: 0.4, borderRadius: '50px' }} />
               )}
             </IconButton>
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <EmojiEventsIcon sx={{ fontSize: 24, mr: 0.5 }} />
-              Dream11
-            </Typography>
+            <img src={AppLogo} className="app-logo" />
           </Box>
 
           <Select
             value={language}
             onChange={handleLanguageChange}
-            size="large"   
+            size="large"
             sx={{
               width: "150px",
-              height: "45px",
-              backgroundColor: "#580d0b",
-              border: "2px solid rgb(96, 28, 24)", 
-              borderRadius: "20px", 
-              color: "white", 
-              fontSize: "14px", 
+              height: "35px",
+              backgroundColor: "#195226",
+              border: "2px solid rgb(16, 54, 6)",
+              borderRadius: "20px",
+              color: "white",
+              fontSize: "14px",
               "& .MuiSelect-select": {
-                padding: "10px", 
+                padding: "10px",
               },
               "& .MuiOutlinedInput-notchedOutline": {
-                border: "none", 
+                border: "none",
               },
             }}
           >
-            <MenuItem value="EN">English</MenuItem>
-            <MenuItem value="HI">हिंदी</MenuItem>
-            <MenuItem value="FR">Français</MenuItem>
-            <MenuItem value="ES">Español</MenuItem>
+            <MenuItem value="EN"><b>English</b></MenuItem>
+            <MenuItem value="HI"><b>हिंदी</b></MenuItem>
+            <MenuItem value="FR"><b>Français</b></MenuItem>
+            <MenuItem value="ES"><b>Español</b></MenuItem>
           </Select>
         </Toolbar>
       </AppBar>
 
-     
+
       {isSidebarOpen && (
         <Box
           sx={{
             width: {
-            //   xs: "100%", 
-              sm: "250px", 
+              // sm: "300px",
             },
             background:
               "linear-gradient(90deg, #431010 1.41%, rgba(35, 5, 5, 0.88) 100%)",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-            padding: 2,
             zIndex: 10,
             border: "2px solid #B15656",
-            borderRadius:"20px",
-            color:"white",
+            borderRadius: "10px",
+            color: "white",
             position: 'absolute',
-            marginLeft:'10px',
-            px:'30px'
+            marginLeft: '10px',
+            px: '20px',
+            opacity: '0.8',
+            "@media (min-width: 300px) and (max-width: 800px)": {
+              opacity: 1,
+            },
           }}
+          onClick={handleClose}
         >
           <List>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px'}}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1 , color:"white"}}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Cricket" />
@@ -145,9 +139,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Football" />
@@ -157,9 +151,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white"}}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsKabaddiIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Kabaddi" />
@@ -169,9 +163,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <InstallMobileIcon />
               </ListItemIcon>
               <ListItemText primary="App Download" />
@@ -181,9 +175,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Sports" />
@@ -193,9 +187,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <MilitaryTechIcon />
               </ListItemIcon>
               <ListItemText primary="Dream11 Winners" />
@@ -205,9 +199,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <MilitaryTechIcon />
               </ListItemIcon>
               <ListItemText primary="Dream11 Private Contest" />
@@ -217,9 +211,9 @@ const Header = () => {
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py:'15px' }}
+              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
             >
-              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color:"white" }}>
+              <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <MilitaryTechIcon />
               </ListItemIcon>
               <ListItemText primary="IPL Fantasy" />
@@ -230,6 +224,7 @@ const Header = () => {
           </List>
         </Box>
       )}
+      <HeroSection />
     </>
   );
 };
