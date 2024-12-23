@@ -256,19 +256,26 @@ const Boxs = styled(Box)({
   justifyContent: 'center',
   display: 'block',
   marginTop: '40px',
+  '@media (min-width: 300px) and (max-width: 800px)': {
+    width: '80%'
+  }
 })
 
 const Cards = styled(Card)({
   textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
   width: '95%',
-  height: '25vh',
-  border: '0.9px solid rgb(255, 107, 107)',
+  height: 'auto',
+  border: '0.9px solid rgb(247, 126, 126)',
   borderRadius: '20px',
   background: ' #f5f5f5',
   position: 'relative',
   overflow: 'visible',
   '@media (min-width: 300px) and (max-width: 800px)': {
-    height: '30vh',
+    height: 'auto', 
+    margin: '0px 10px',
+    width: 'auto'
   }
 })
 

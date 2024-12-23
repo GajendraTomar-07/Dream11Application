@@ -27,7 +27,7 @@ export default function FooterPage() {
           <Btn><LinkedInIcon /></Btn>
           <Btn><YouTubeIcon /></Btn>
           <Btn><InstagramIcon /></Btn>
-          <Btn><TelegramIcon /></Btn>
+          <Btn1><TelegramIcon /></Btn1>
         </Grid>
         <p className='border-bottom-p1'></p>
         <Grid item sm={2}>
@@ -97,12 +97,12 @@ export default function FooterPage() {
         <p className='vertical-tag2'></p>
         <p className='border-bottom-p1'></p>
         <Grid item sm={3} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6">
+          <Typography variant="subtitle">
             FOUNDING MEMBER
             <br />
             <img src={FooterImg1} className='app-logo1' />
           </Typography>
-          <Typography variant="h6">
+          <Typography variant="subtitle2">
             FAIRPLAY POLICY
             <br />
             <img src={FooterImg2} className='app-logo1' />
@@ -161,8 +161,19 @@ const Btn = styled(Button)({
   textTransform: 'none'
 })
 
+const Btn1 = styled(Button)({
+  backgroundColor: 'white',
+  color: '#373737',
+  borderRadius: '50px',
+  padding: '5px',
+  margin: '10px 3px',
+  textTransform: 'none',
+  '@media (min-width: 300px) and (max-width: 800px)': {
+    display: 'none',
+  }
+})
+
 const AddressBox = styled(Box)({
-  width: '80%',
   margin: '0 auto',
   alignItems: 'center',
   textAlign: 'center',
@@ -170,7 +181,6 @@ const AddressBox = styled(Box)({
 })
 
 const AddressBoxPolicy = styled(Box)({
-  width: '100%',
   margin: '0 auto',
   alignItems: 'center',
   textAlign: 'center',
@@ -179,7 +189,6 @@ const AddressBoxPolicy = styled(Box)({
 })
 
 const GuidlineBox = styled(Box)({
-  width: '97%',
   margin: '0 auto',
   alignItems: 'center',
   textAlign: 'center',
