@@ -13,120 +13,124 @@ import CardContent from "@mui/material/CardContent";
 import Winning1 from "../assets/winning.webp";
 import Winning2 from "../assets/winning1.webp";
 import Winning3 from "../assets/winning2.webp";
+import PlayFeature from "./PlayFeature";
 
 export default function OfficialPartner() {
   return (
-    <BoxContainer component="section">
-      <MainContainer>
+    <>
+      <BoxContainer component="section">
+        <MainContainer>
+          <Text variant="h6">
+            <b>Official</b> <b className="Header-clr">Partner</b>
+          </Text>
+
+          <GridContainer container spacing={2}>
+            <Grid item sm={3}>
+              <img src={LogoBCCI} className="img-logo" />
+            </Grid>
+            <Grid item sm={3}>
+              <img src={LogoPKL} className="img-logo" />
+            </Grid>
+            <Grid item sm={3}>
+              <img src={LogoSA20} className="img-logo" />
+            </Grid>
+            <Grid item sm={3}>
+              <img src={LogoTata} className="img-logo" />
+            </Grid>
+          </GridContainer>
+        </MainContainer>
+
         <Text variant="h6">
-          <b>Official</b> <b className="Header-clr">Partner</b>
+          <strong>It's easy to start playing </strong>{" "}
+          <b className="Header-clr">on Dream11</b>
         </Text>
 
-        <GridContainer container spacing={2}>
-          <Grid item sm={3}>
-            <img src={LogoBCCI} className="img-logo" />
-          </Grid>
-          <Grid item sm={3}>
-            <img src={LogoPKL} className="img-logo" />
-          </Grid>
-          <Grid item sm={3}>
-            <img src={LogoSA20} className="img-logo" />
-          </Grid>
-          <Grid item sm={3}>
-            <img src={LogoTata} className="img-logo" />
-          </Grid>
-        </GridContainer>
-      </MainContainer>
+        <div className="div-txt">
+          <Typography variant="subtitle2">
+            <b>
+              Play{" "}
+              <a className="hrefTxt" href="#">
+                Fantasy Cricket
+              </a>{" "}
+              on Dream11 and win big!
+            </b>
+          </Typography>
+        </div>
 
-      <Text variant="h6">
-        <strong>It's easy to start playing </strong>{" "}
-        <b className="Header-clr">on Dream11</b>
-      </Text>
+        <ParaTxt variant="body2" sx={{ opacity: "0.6" }}>
+          Enter into the thrilling world of Fantasy sports, a strategy-based
+          online sports game wherein you can create a virtual team of real players
+          playing in real life matches. Create your team to win points based on
+          all the players' performance in a live game.
+        </ParaTxt>
+        <br />
+        <br />
 
-      <div className="div-txt">
-        <Typography variant="subtitle2">
-          <b>
-            Play{" "}
-            <a className="hrefTxt" href="#">
-              Fantasy Cricket
-            </a>{" "}
-            on Dream11 and win big!
-          </b>
-        </Typography>
-      </div>
-
-      <ParaTxt variant="body2" sx={{ opacity: "0.6" }}>
-        Enter into the thrilling world of Fantasy sports, a strategy-based
-        online sports game wherein you can create a virtual team of real players
-        playing in real life matches. Create your team to win points based on
-        all the players' performance in a live game.
-      </ParaTxt>
-      <br />
-      <br />
-
-      <GridContainer1 container spacing={2}>
-        <Grid item xs={12} sm={4}>
-          <CardContainer>
-            <CardContent>
-              <span className="step-number">1</span>
-              <div>
-                <div className="div-head">
-                  <Typography variant="subtitle1">
-                    <b>Select A Match</b>
+        <GridContainer1 container spacing={2}>
+          <Grid item xs={12} sm={4}>
+            <CardContainer>
+              <CardContent>
+                <span className="step-number">1</span>
+                <div>
+                  <div className="div-head">
+                    <Typography variant="subtitle1">
+                      <b>Select A Match</b>
+                    </Typography>
+                  </div>
+                  <div>
+                    <img src={Winning1} className="logo" />
+                  </div>
+                  <Typography variant="caption">
+                    Choose an upcoming match that you want to play
                   </Typography>
                 </div>
+              </CardContent>
+            </CardContainer>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <CardContainer>
+              <CardContent>
+                <span className="step-number">2</span>
                 <div>
-                  <img src={Winning1} className="logo" />
-                </div>
-                <Typography variant="caption">
-                  Choose an upcoming match that you want to play
-                </Typography>
-              </div>
-            </CardContent>
-          </CardContainer>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <CardContainer>
-            <CardContent>
-              <span className="step-number">2</span>
-              <div>
-                <div className="div-head">
-                  <Typography variant="subtitle1">
-                    <b>Create Team</b>
+                  <div className="div-head">
+                    <Typography variant="subtitle1">
+                      <b>Create Team</b>
+                    </Typography>
+                  </div>
+                  <div>
+                    <img src={Winning2} className="logo" />
+                  </div>
+                  <Typography variant="caption">
+                    Use your skills to pick the right players
                   </Typography>
                 </div>
+              </CardContent>
+            </CardContainer>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <CardContainer>
+              <CardContent>
+                <span className="step-number">3</span>
                 <div>
-                  <img src={Winning2} className="logo" />
-                </div>
-                <Typography variant="caption">
-                  Use your skills to pick the right players
-                </Typography>
-              </div>
-            </CardContent>
-          </CardContainer>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <CardContainer>
-            <CardContent>
-              <span className="step-number">3</span>
-              <div>
-                <div className="div-head">
-                  <Typography variant="subtitle1">
-                    <b>Join Contests</b>
+                  <div className="div-head">
+                    <Typography variant="subtitle1">
+                      <b>Join Contests</b>
+                    </Typography>
+                  </div>
+                  <div>
+                    <img src={Winning3} className="logo" />
+                  </div>
+                  <Typography variant="caption">
+                    Choose between different contests and compete
                   </Typography>
                 </div>
-                <div>
-                  <img src={Winning3} className="logo" />
-                </div>
-                <Typography variant="caption">
-                  Choose between different contests and compete
-                </Typography>
-              </div>
-            </CardContent>
-          </CardContainer>
-        </Grid>
-      </GridContainer1>
-    </BoxContainer>
+              </CardContent>
+            </CardContainer>
+          </Grid>
+        </GridContainer1>
+      </BoxContainer>
+      <PlayFeature />
+    </>
   );
 }
 
