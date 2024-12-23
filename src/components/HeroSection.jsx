@@ -111,6 +111,8 @@ const HeroSection = () => {
             style={{ width: "50%", height: "85vh",margin:"auto",  marginTop: "80px",}}
           />
         </div>
+
+        
        
       </Slider>
     </Box>
