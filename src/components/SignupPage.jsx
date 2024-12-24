@@ -35,7 +35,7 @@ export default function SignupPage() {
 
 const BoxContainer = styled(Box)({
   height: '95vh',
-  background: 'linear-gradient(to right, #66ff99 0%, #ffffff 100%)',
+  background: 'linear-gradient(to top right, #00ff00 0%, #ccff99 100%)',
   padding: '15px',
   '@media (min-width: 300px) and (max-width: 800px)': {
     height: 'auto',
@@ -63,8 +63,8 @@ const GridContent = styled(Grid)({
 const Btn = styled(Button)({
   textTransform: 'none',
   color: 'white',
-  background: 'linear-gradient(to right, #66ff99 0%, #ffffff 100%)',
-  color: 'black',
+  background: 'linear-gradient(to top right, #00ff00 0%, #ccff99 100%)',
+  // color: 'black',
   padding: '10px 50px',
   fontSize: '16px'
 })

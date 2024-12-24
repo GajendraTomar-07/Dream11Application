@@ -32,7 +32,7 @@ export default function LoginPage() {
 
 const BoxContainer = styled(Box)({
   height: '90vh',
-  background: 'linear-gradient(to right, #3366ff 0%, #99ccff 100%)',
+  background: 'linear-gradient(to top right, #00ff00 0%, #ccff99 100%)',
   padding: '60px 10px 0px 10px',
   '@media (min-width: 300px) and (max-width: 800px)': {
     height: 'auto',
@@ -60,7 +60,7 @@ const GridContent = styled(Grid)({
 const Btn = styled(Button)({
   textTransform: 'none',
   color: 'white',
-  background: 'linear-gradient(to right, #3366ff 0%, #99ccff 100%)',
+  background: 'linear-gradient(to top right, #00ff00 0%, #ccff99 100%)',
   padding: '10px 50px',
   fontSize: '16px'
 })

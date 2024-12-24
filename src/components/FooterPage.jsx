@@ -159,6 +159,12 @@ const GridContent = styled(Grid)({
   alignItems: "center",
   justifyContent: "center",
   padding: "30px 10px",
+  '@media (min-width: 300px) and (max-width: 600px)': {
+    // width: '80%'
+  },
+  '@media (min-width: 600px) and (max-width: 1100px)': {
+    padding: "10px",
+  }
 });
 
 const Btn = styled(Button)({

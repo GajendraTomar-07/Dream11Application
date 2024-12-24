@@ -261,8 +261,11 @@ const Boxs = styled(Box)({
   justifyContent: 'center',
   display: 'block',
   marginTop: '40px',
-  '@media (min-width: 300px) and (max-width: 800px)': {
+  '@media (min-width: 300px) and (max-width: 600px)': {
     width: '80%'
+  },
+  '@media (min-width: 600px) and (max-width: 1100px)': {
+    width: '90%',
   }
 })
 
@@ -294,4 +297,12 @@ const HeadContainer = styled(Container)({
   position: 'absolute',
   left: '20%',
   top: '-20px',
+  "@media (min-width: 300px) and (max-width: 600px)": {
+    width: "80%",
+    left: '10%',
+  },
+  "@media (min-width: 600px) and (max-width: 1100px)": {
+    width: "80%",
+    left: '10%',
+  },
 })

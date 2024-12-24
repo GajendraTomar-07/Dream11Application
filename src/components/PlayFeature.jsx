@@ -40,7 +40,7 @@ export default function PlayFeature() {
             <CardContent>
               <div>
                 <div className='div-icon'>
-                  <AccountCircleIcon sx={{ fontSize: '70px', border: '4px solid #8f8e8e', borderRadius: '50%' }} />
+                  <AccountCircleIcon sx={{ fontSize: '60px', border: '4px solid #8f8e8e', borderRadius: '50%' }} />
                 </div>
                 <div className='div-title'>
                   <Typography variant="subtitle1">
@@ -80,7 +80,7 @@ export default function PlayFeature() {
             <CardContent>
               <div>
                 <div className='div-icon'>
-                  <AccountCircleIcon sx={{ fontSize: '70px', border: '4px solid #8f8e8e', borderRadius: '50%' }} />
+                  <AccountCircleIcon sx={{ fontSize: '60px', border: '4px solid #8f8e8e', borderRadius: '50%' }} />
                 </div>
                 <div className='div-title'>
                   <Typography variant="subtitle1">
@@ -121,7 +121,7 @@ export default function PlayFeature() {
             <CardContent>
               <div>
                 <div className='div-icon'>
-                  <AccountCircleIcon sx={{ fontSize: '70px', border: '4px solid #8f8e8e', borderRadius: '50%' }} />
+                  <AccountCircleIcon sx={{ fontSize: '60px', border: '4px solid #8f8e8e', borderRadius: '50%' }} />
                 </div>
                 <div className='div-title'>
                   <Typography variant="subtitle1">
@@ -241,16 +241,19 @@ const CardContainer = styled(Card)({
   position: 'relative',
   padding: '0px',
   boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
-  '@media (min-width: 300px) and (max-width: 800px)': {
-    width: '100%',
+  '@media (min-width: 300px) and (max-width: 600px)': {
+    width: '100%',  
     margin: '20px 0px'
+  },
+  '@media (min-width: 600px) and (max-width: 1100px)': {
+    width: '100%',
+    margin: '20px 10px'
   }
 });
 
 const BoxRating = styled(Box)({
   width: '80%',
   background: ' #f5f5f5',
-  height: '332px',
   margin: '0 auto',
   display: 'flex',
   flexDirection: 'row',
@@ -260,10 +263,14 @@ const BoxRating = styled(Box)({
   overflowX: 'scroll',
   padding: '20px 10px',
   overflowY: 'scroll',
-  '@media (min-width: 300px) and (max-width: 800px)': {
-    width: '100%',
+  "@media (min-width: 300px) and (max-width: 700px)": {
+    width: "100%",
+    height: '330px',
     flexDirection: 'column',
-  }
+  },
+  "@media (min-width: 700px) and (max-width: 1100px)": {
+    width: "100%",
+  },
 });
 
 const Txt = styled(Box)({
@@ -285,8 +292,12 @@ const FooterBox = styled(Box)({
   color: 'black',
   marginBottom: '10px',
   boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-  '@media (min-width: 300px) and (max-width: 800px)': {
+  '@media (min-width: 300px) and (max-width: 700px)': {
     width: '100%',
     padding: '0px',
-  }
+  },
+  "@media (min-width: 700px) and (max-width: 1100px)": {
+    width: "80%",
+    padding: '0px'
+  },
 })
