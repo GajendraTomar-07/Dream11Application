@@ -162,8 +162,11 @@ const MainContainer = styled(Container)({
   alignItems: "center",
   textAlign: "center",
   justifyContent: "center",
-  "@media (min-width: 300px) and (max-width: 800px)": {
+  "@media (min-width: 300px) and (max-width: 700px)": {
     width: "100%",
+  },
+  "@media (min-width: 700px) and (max-width: 1100px)": {
+    width: "80%",
   },
 });
 
@@ -185,6 +188,12 @@ const GridContainer1 = styled(Grid)({
   padding: 0,
   marginBottom: "40px",
   fontFamily: "robotobold",
+  "@media (min-width: 300px) and (max-width: 700px)": {
+    width: "95%",
+  },
+  "@media (min-width: 700px) and (max-width: 1100px)": {
+    width: "95%",
+  },
 });
 
 const ParaTxt = styled(Typography)({

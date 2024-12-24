@@ -46,7 +46,7 @@ const Header = () => {
         sx={{
           backgroundColor: {
             xs: "#00754a",
-            sm: "black",
+            sm: "#00754a",
           },
         }}
       >
@@ -103,15 +103,11 @@ const Header = () => {
 
       {isSidebarOpen && (
         <Box
-          sx={{
-            width: {
-              // sm: "300px",
-            },
-            background:
-              "linear-gradient(90deg, #431010 1.41%, rgba(35, 5, 5, 0.88) 100%)",
+          sx={{          
+            backgroundColor: "#195226",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
             zIndex: 10,
-            border: "2px solid #B15656",
+            border: "2px solid white",
             borderRadius: "10px",
             color: "white",
             position: 'absolute',
@@ -127,98 +123,98 @@ const Header = () => {
           <List>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Cricket" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
-              </ListItemSecondaryAction>
+                <ArrowForwardIcon sx={{ color: "white" }} />
+              </ListItemSecondaryAction> 
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Football" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsKabaddiIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Kabaddi" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <InstallMobileIcon />
               </ListItemIcon>
               <ListItemText primary="App Download" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <SportsBaseballIcon />
               </ListItemIcon>
               <ListItemText primary="Fantasy Sports" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <MilitaryTechIcon />
               </ListItemIcon>
               <ListItemText primary="Dream11 Winners" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <MilitaryTechIcon />
               </ListItemIcon>
               <ListItemText primary="Dream11 Private Contest" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem
               button
-              sx={{ borderBottom: "1px solid #B15656", paddingLeft: 0, py: '15px' }}
+              sx={{ borderBottom: "1px solid white", paddingLeft: 0, py: '10px' }}
             >
               <ListItemIcon sx={{ minWidth: "auto", marginRight: 1, color: "white" }}>
                 <MilitaryTechIcon />
               </ListItemIcon>
               <ListItemText primary="IPL Fantasy" />
               <ListItemSecondaryAction>
-                <ArrowForwardIcon sx={{ color: "#B15656" }} />
+                <ArrowForwardIcon sx={{ color: "white" }} />
               </ListItemSecondaryAction>
             </ListItem>
           </List>

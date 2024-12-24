@@ -1,11 +1,9 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
-import Destop2024 from "../assets/Destop2024.webp";
-import Desktop1 from "../assets/Desktop1.webp";
-import Desktop2 from "../assets/Desktop2.webp";
-import Desktop3 from "../assets/Desktop3.webp";
-import Desktop4 from "../assets/desktop4.webp";
-import Desktop5 from '../assets/Desktop5.webp';
+import { Grid, Box, styled } from "@mui/material";
+import AgricultureImg from "../assets/agricltureImg.jpeg";
+import Desktop1 from "../assets/desktop1.jpeg";
+import Desktop2 from "../assets/desktop2.jpeg";
+import Desktop3 from "../assets/desktop3.jpeg";
 import Slider from "react-slick";
 import "./HeroSection.css";
 import { useState, useEffect } from "react";
@@ -16,26 +14,26 @@ import "slick-carousel/slick/slick-theme.css";
 import OfficialPartner from "./OfficialPartner";
 
 
-const HeroSection = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+export default function HeroSection() {
+  // const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  useEffect(() => {
-    // AOS.init({
-    //   duration: 1000,
-    //   // once: true,
-    // });
+  // useEffect(() => {
+  // AOS.init({
+  //   duration: 1000,
+  //   // once: true,
+  // });
 
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 767);
-    };
+  // const handleResize = () => {
+  //   setIsSmallScreen(window.innerWidth <= 767);
+  // };
 
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
+  // handleResize(); // Initial check
+  // window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // return () => {
+  // window.removeEventListener("resize", handleResize);
+  // };
+  // }, []);
 
   const settings = {
     dots: true,
@@ -50,9 +48,8 @@ const HeroSection = () => {
     <>
       <Grid
         sx={{
-          height: "105vh",
-          backgroundImage: `url(${Destop2024})`,
-          // backgroundSize: "cover",
+          backgroundImage: `url(${AgricultureImg})`,
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           '@media (max-width: 600px)': {
@@ -63,13 +60,13 @@ const HeroSection = () => {
             backgroundSize: 'cover',
           },
           "@media (max-width: 480px)": {
-            backgroundImage: `url(${Destop2024})`,
+            backgroundImage: `url(${AgricultureImg})`,
             backgroundColor: "#050c1f",
           },
         }}
       >
         <Grid item>
-          <Box  >
+          <BoxContainer>
             <Slider {...settings} >
               <div
                 data-aos="zoom-in"
@@ -80,7 +77,7 @@ const HeroSection = () => {
                 }}
               >
                 <img
-                  src={isSmallScreen ? Desktop4 : Desktop1}
+                  src={Desktop1}
                   alt="desktop"
                   className="Img-header"
                 />
@@ -96,7 +93,7 @@ const HeroSection = () => {
                 <img
                   src={Desktop2}
                   alt="desktop"
-                  className="Img-header1"
+                  className="Img-header"
                 />
               </div>
               <div
@@ -108,16 +105,13 @@ const HeroSection = () => {
                 }}
               >
                 <img
-                  src={isSmallScreen ? Desktop5 : Desktop3}
+                  src={Desktop3}
                   alt="desktop"
-                  className="Img-header2"
+                  className="Img-header"
                 />
               </div>
-
-
-
             </Slider>
-          </Box>
+          </BoxContainer>
         </Grid>
       </Grid>
       <OfficialPartner />
@@ -125,4 +119,12 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+const BoxContainer = styled(Box)({
+  padding: '50px 10px',
+  '@media (min-width: 300px) and (max-width: 600px)': {
+    // padding: '100px 10px 10px 10px',
+  },
+  '@media (min-width: 600px) and (max-width: 1100px)': {
+    // padding: '10px 10px 10px 10px',
+  }
+})
