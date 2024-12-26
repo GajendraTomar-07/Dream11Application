@@ -275,7 +275,7 @@ const Cards = styled(Card)({
   justifyContent: 'center',
   width: '95%',
   height: 'auto',
-  border: '0.9px solid rgb(247, 126, 126)',
+  border: '0.9px solid #00754a',
   borderRadius: '20px',
   background: ' #f5f5f5',
   position: 'relative',
@@ -289,10 +289,10 @@ const Cards = styled(Card)({
 
 const HeadContainer = styled(Container)({
   width: '60%',
-  border: '0.9px solid rgb(255, 107, 107)',
+  border: '0.9px solid #00754a',
   borderRadius: '20px',
   backgroundColor: 'white',
-  color: 'red',
+  color: '#00754a',
   padding: '5px 5px 10px 5px',
   position: 'absolute',
   left: '20%',

@@ -44,11 +44,9 @@ const Header = () => {
       <AppBar
         position="static"
         sx={{
-          backgroundColor: {
-            xs: "#00754a",
-            sm: "#00754a",
-          },
-        }}
+          // backgroundColor: "rgb(67, 153, 67)"
+          backgroundColor: "#1D4F06"
+          }}
       >
         <Toolbar
           sx={{
@@ -89,6 +87,9 @@ const Header = () => {
               },
               "& .MuiOutlinedInput-notchedOutline": {
                 border: "none",
+              },
+              "& .MuiSvgIcon-root": {
+                color: "#fff", 
               },
             }}
           >

@@ -1,5 +1,5 @@
 .Header-clr {
-  color: #e10000;
+  color: #00754a;
 }
 
 .img-logo {
@@ -121,7 +121,7 @@
 }
 
 .slick-prev::before {
-  color: red !important;
+  color: #00754a !important;
   font-size: 20px;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .slick-next::before {
-  color: red !important;
+  color: #00754a !important;
   font-size: 20px;
 }
 
@@ -156,10 +156,20 @@
 
 .Img-header {
   width: 30%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: auto;
   border-radius: 30px;
-  margin-top: 80px;
+}
+
+.Img-header2 {
+  width: 38%;
+  margin: auto;
+  border-radius: 30px;
+}
+
+.Img-header3 {
+  width: 40%;
+  margin: auto;
+  border-radius: 30px;
 }
 
 .login-img {
@@ -233,10 +243,24 @@
   .Img-header {
     width: 60%;
     border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: auto;
     margin-top: 80px;
   }
+
+  .Img-header2 {
+    width: 75%;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 80px;
+  }
+
+  .Img-header3 {
+    width: 80%;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 80px;
+  }
+
 
   .login-img {
     width: 300px;
@@ -251,7 +275,20 @@
 @media (min-width: 600px) and (max-width: 1100px) {
   .Img-header {
     width: 50%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 80px;
+  }
+
+  .Img-header2 {
+    width: 60%;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 80px;
+  }
+
+  .Img-header3 {
+    width: 65%;
     margin: auto;
     border-radius: 30px;
     margin-top: 80px;

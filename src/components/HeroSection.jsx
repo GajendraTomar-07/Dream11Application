@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid, Box, styled } from "@mui/material";
-import AgricultureImg from "../assets/agricltureImg.jpeg";
-import Desktop1 from "../assets/desktop1.jpeg";
-import Desktop2 from "../assets/desktop2.jpeg";
-import Desktop3 from "../assets/desktop3.jpeg";
+import AgricultureImg from "../assets/background-Img.png";
+import Desktop1 from "../assets/farmer-Photoroom.png";
+import Desktop2 from "../assets/kisan2-removebg-preview.png";
+import Desktop3 from "../assets/farmer1-Photoroom.png";
 import Slider from "react-slick";
 import "./HeroSection.css";
 import { useState, useEffect } from "react";
@@ -48,19 +48,23 @@ export default function HeroSection() {
     <>
       <Grid
         sx={{
+          marginTop: '80px',
           backgroundImage: `url(${AgricultureImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           '@media (max-width: 600px)': {
             backgroundSize: 'auto',
+            marginTop: '0px',
             backgroundPosition: 'center top',
           },
           '@media (max-width: 960px)': {
+            marginTop: '0px',
             backgroundSize: 'cover',
           },
           "@media (max-width: 480px)": {
             backgroundImage: `url(${AgricultureImg})`,
+            marginTop: '0px',
             backgroundColor: "#050c1f",
           },
         }}
@@ -73,13 +77,28 @@ export default function HeroSection() {
                 style={{
                   display: "flex",
                   justifyContent: "center",
+                  position: "relative",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={Desktop3}
+                  alt="desktop"
+                  className="Img-header"
+                />
+              </div>
+              <div
+                data-aos="zoom-in"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
                   alignItems: "center",
                 }}
               >
                 <img
                   src={Desktop1}
                   alt="desktop"
-                  className="Img-header"
+                  className="Img-header2"
                 />
               </div>
               <div
@@ -93,21 +112,7 @@ export default function HeroSection() {
                 <img
                   src={Desktop2}
                   alt="desktop"
-                  className="Img-header"
-                />
-              </div>
-              <div
-                data-aos="zoom-in"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  src={Desktop3}
-                  alt="desktop"
-                  className="Img-header"
+                  className="Img-header3"
                 />
               </div>
             </Slider>
@@ -121,6 +126,7 @@ export default function HeroSection() {
 
 const BoxContainer = styled(Box)({
   padding: '50px 10px',
+  overflow: 'visible',
   '@media (min-width: 300px) and (max-width: 600px)': {
     // padding: '100px 10px 10px 10px',
   },
