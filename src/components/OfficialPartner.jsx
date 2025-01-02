@@ -14,8 +14,23 @@ import Winning1 from "../assets/winning.webp";
 import Winning2 from "../assets/winning1.webp";
 import Winning3 from "../assets/winning2.webp";
 import PlayFeature from "./PlayFeature";
+import { Button } from "@mui/material";
+import EnvestorModal from "./EnvestorModal";
+import { useState } from "react";
 
 export default function OfficialPartner() {
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return (
     <>
       <BoxContainer component="section">
@@ -25,20 +40,17 @@ export default function OfficialPartner() {
           </Text>
 
           <GridContainer container spacing={2}>
-            <Grid item sm={3}>
-              <img src={LogoBCCI} className="img-logo" />
-            </Grid>
-            <Grid item sm={3}>
-              <img src={LogoPKL} className="img-logo" />
-            </Grid>
-            <Grid item sm={3}>
-              <img src={LogoSA20} className="img-logo" />
-            </Grid>
-            <Grid item sm={3}>
-              <img src={LogoTata} className="img-logo" />
-            </Grid>
-          </GridContainer>
-        </MainContainer>
+  <Grid item sm={12}>
+    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', padding: '20px', border: '1px solid #ccc' }}>
+            {/* <Button variant="h5">Envestors</Button> */}
+            <Button variant="h5" onClick={handleClickOpen}>
+               Investor
+             </Button>
+         <EnvestorModal open={open} handleClose={handleClose} />
+      </div>
+  </Grid>
+</GridContainer>
+   </MainContainer>
 
         <Text variant="h6">
           <strong>It's easy to start playing </strong>{" "}

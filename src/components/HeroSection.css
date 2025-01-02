@@ -6,7 +6,7 @@
     width: 24px; 
     height: 10px;    
      display: block;
-    background-color: black; 
+    background-color: rgb(185, 174, 174); 
     opacity: 0.5;
     border-radius: 3px; 
     /* position: relative; */
@@ -15,7 +15,7 @@
   
   .slick-dots li.slick-active button:before {
     opacity: 1; 
-    background-color: black; 
+    background-color: white; 
   }
   
   
