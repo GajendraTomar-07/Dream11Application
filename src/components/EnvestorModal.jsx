@@ -39,7 +39,7 @@ const EnvestorModal = ({ open, handleClose }) => {
       aria-labelledby="responsive-dialog-title"
       PaperProps={{
         sx: {
-          // // width: "600px",
+          width: "550px",
           // margin: "auto",
         
           borderRadius:'20px'
@@ -48,12 +48,12 @@ const EnvestorModal = ({ open, handleClose }) => {
     >
       <DialogTitle
         id="responsive-dialog-title"
-        sx={{ p: "20px", backgroundColor: "#d9faf7", textAlign: "center",  justifyContent: "center", }}
+        sx={{p:'15px', backgroundColor: "#d9faf7", textAlign: "center",  justifyContent: "center", }}
       >
       <b>  Investor Detail Form </b>
       </DialogTitle>
       <DialogContent
-        sx={{ backgroundColor: "#e8f5e9", pb: "10px", textAlign: "center" }}
+        sx={{ backgroundColor: "#e8f5e9",textAlign: "center" }}
       >
         <TextField
           name="firstname"
@@ -61,7 +61,7 @@ const EnvestorModal = ({ open, handleClose }) => {
           variant="outlined"
           value={formData.firstname}
           onChange={handleChange}
-          sx={{ m: 2 }}
+          sx={{ m: 1 }}
         />
          <TextField
           name="lastname"
@@ -69,7 +69,7 @@ const EnvestorModal = ({ open, handleClose }) => {
           variant="outlined"
           value={formData.lastname}
           onChange={handleChange}
-          sx={{ m: 2 }}
+          sx={{ m: 1 }}
         />
         <TextField
           name="email"
@@ -78,7 +78,7 @@ const EnvestorModal = ({ open, handleClose }) => {
           variant="outlined"
           value={formData.email}
           onChange={handleChange}
-          sx={{ m: 2 }}
+          sx={{ m: 1 }}
         />
         <TextField
           name="phone"
@@ -87,13 +87,13 @@ const EnvestorModal = ({ open, handleClose }) => {
           variant="outlined"
           value={formData.phone}
           onChange={handleChange}
-          sx={{ m: 2 }}
+          sx={{ m: 1 }}
         />
        
       </DialogContent>
       <DialogActions
   sx={{
-    p: "20px",
+    p: "15px",
     backgroundColor: "#e8f5e9",
     textAlign: "center",
     justifyContent: {
@@ -103,7 +103,7 @@ const EnvestorModal = ({ open, handleClose }) => {
     gap: 2, 
     paddingRight: {
       xs: 0, 
-      sm: "55px", 
+      sm: "40px", 
     },
   }}
 >

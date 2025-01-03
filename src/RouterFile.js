@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './components/LoginPage';
 import Header from './components/Header';
 import SignupPage from './components/SignupPage';
-import ProductCard from './components/ProductCard';
+import Products from './components/Products';
 
 const RouterFile = () => {
   return (
@@ -13,7 +13,10 @@ const RouterFile = () => {
         <Route path='/' element={<Header/>} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/signup' element={<SignupPage />} />
-          <Route path='/productcard' element={<ProductCard />}/>
+
+        <Route path='/products' element={<Products/>}/>
+        
+
         </Routes>
       </Router>
     </>

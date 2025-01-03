@@ -87,34 +87,7 @@ const Header = () => {
             <Typography variant="h5">Krish Chakra</Typography>
           </Box>
 
-          {/* <Select
-            value={language}
-            onChange={handleLanguageChange}
-            size="large"
-            sx={{
-              width: "150px",
-              height: "35px",
-              backgroundColor: "#195226",
-              border: "2px solid rgb(16, 54, 6)",
-              borderRadius: "20px",
-              color: "white",
-              fontSize: "14px",
-              "& .MuiSelect-select": {
-                padding: "10px",
-              },
-              "& .MuiOutlinedInput-notchedOutline": {
-                border: "none",
-              },
-              "& .MuiSvgIcon-root": {
-                color: "#fff", 
-              },
-            }}
-          >
-            <MenuItem value="EN"><b>English</b></MenuItem>
-            <MenuItem value="HI"><b>हिंदी</b></MenuItem>
-            <MenuItem value="FR"><b>Français</b></MenuItem>
-            <MenuItem value="ES"><b>Español</b></MenuItem>
-          </Select> */}
+       
        <IconButton onClick={handleLogout}>
               <LogoutIcon sx={{ color: "white", fontSize: "25px" }} />
             </IconButton>

@@ -12,28 +12,11 @@ import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import OfficialPartner from "./OfficialPartner";
+import Sidebar from "./Sidebar";
 
 
 export default function HeroSection() {
-  // const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  // useEffect(() => {
-  // AOS.init({
-  //   duration: 1000,
-  //   // once: true,
-  // });
-
-  // const handleResize = () => {
-  //   setIsSmallScreen(window.innerWidth <= 767);
-  // };
-
-  // handleResize(); // Initial check
-  // window.addEventListener("resize", handleResize);
-
-  // return () => {
-  // window.removeEventListener("resize", handleResize);
-  // };
-  // }, []);
 
   const settings = {
     dots: true,
@@ -46,8 +29,10 @@ export default function HeroSection() {
 
   return (
     <>
+    <Sidebar/>
       <Grid
         sx={{
+          marginLeft: "250px",
           marginTop: '80px',
           backgroundImage: `url(${AgricultureImg})`,
           backgroundSize: "cover",
