@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,116 +7,175 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
 import { Box, Grid } from "@mui/material";
-import CardImg from "../assets/pexelImg1.webp";
 import styled from "@mui/system/styled";
+import { Link, useNavigate } from "react-router-dom";
+import { Data } from "./Data";
+import ProductDetails from "./ProductDetails";
+import Products from "./Products";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import IconButton from '@mui/material/IconButton';
+
 
 const ProductCard = () => {
-  return (
+  const [data, setData] = useState(null);
+  const navigate = useNavigate();
+  const [show ,setShow] = useState(true);
+
+  const handleNavigation = (id) => {
+    setData(id);
+    setShow(false);
+  };
+
+  const handleBack = () =>{
+    setShow(true);
+  }
+
+  useEffect(()=>{
+    if(data !== null){
+      console.log("selected item",data);
+    }
+  },[data]);
+
+  return (  
     <>
-      <StyleBox>
-        <Grid container spacing={3} justifyContent="center" p={2}>
-          {Array(6) // Replace 6 with the dynamic number of cards if needed
-            .fill(null)
-            .map((_, index) => (
-              <Grid
-                item
-                xs={12} // Full-width on phones
-                sm={6} // Two cards per row on tablets
-                md={4} // Three cards per row on laptops/desktops
-                key={index}
+    { !show ? <>
+    <IconButton onClick={handleBack}><ArrowBackIcon/></IconButton>
+    <ProductDetails data={data}/></> :
+    <StyleBox>
+        <Grid container spacing={3}  p={1}>
+          {Data.map((item) => (
+            <Grid item xs={12} sm={6} md={4}  key={item.id}>
+              {/* <Link */}
+              {/* to={`/ProductDetails/${product.id}`} */}
+              {/* style={{ textDecoration: "none" }} */}
+              {/* > */}
+              <Card
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  // p: "0px",
+                  ":hover": { boxShadow: 7 },
+                  "@media (max-width: 1200px) and (min-width: 850px)": {
+                    flexDirection: "column", 
+                    alignItems: "stretch",
+                    p:'0px'
+                  }
+                }}
               >
-                <Card
+                <CardMedia
+                  component="img"
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    p: "1px",
-                    ":hover": { boxShadow: 7 },
+                    width: 130,
+                    height: 140,
+                    p: "5px",
+                    borderRadius: "12px",
+                    "@media (max-width: 1300px) and (min-width: 850px)": {
+                      width: 110,
+                      height: 120,
+                    },
+                    "@media (max-width: 600px)": { width: 100, height: 120 },
+                    "@media (max-width: 1200px) and (min-width: 850px)":{
+                      width:"auto",
+                      p:'8px',
+                      borderRadius: "20px",
+                    }
+                    
                   }}
-                >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      width: 130,
-                      height: 140,
-                      p: "3px",
-                      borderRadius: "12px",
-                      "@media (max-width: 600px)": { width: 100, height: 110 },
-                    }}
-                    image={CardImg}
-                    title="Product Image"
-                  />
-                  <Box sx={{ flex: 1 }}>
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        component="div"
-                        sx={{
-                          fontSize: "1rem",
-                          "@media (max-width: 600px)": { fontSize: "0.9rem" },
-                          "@media (max-width: 375px)": { fontSize: "0.7rem" },
-                        }}
-                      >
-                        Lorem Ipsum Dolor Sit Amet 
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          marginBottom: 2,
-                          fontSize: "0.85rem",
-                          "@media (max-width: 600px)": { fontSize: "0.8rem" },
-                        }}
-                      >
-                        <Rating
-                          name="size-small"
-                          defaultValue={2}
-                          size="small"
-                        />
-                      </Typography>
-                    </CardContent>
-                    <CardActions
+                  image={item.image}
+                  title={item.productName} />
+                <Box sx={{ flex: 1 }}>
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      component="div"
                       sx={{
-                        display: "flex",
-                        // justifyContent: "center",
-                        // flexWrap: "wrap",
-                        // gap: "8px",
-                        "@media (max-width: 600px)": {
-                          flexDirection: "row",
-                          alignItems: "stretch",
-                        },
+                        fontSize: "1rem",
+                        "@media (max-width: 600px)": { fontSize: "0.9rem" },
+                        "@media (max-width: 375px)": { fontSize: "0.7rem" },
                       }}
                     >
-                      <Button
-                        variant="contained"
-                        color="success"
-                        size="small"
-                        sx={{
-                          fontSize: "0.8rem",
-                          "@media (max-width: 600px)": { fontSize: "0.6rem" },
-                          "@media (max-width: 375px)": { fontSize: "0.65rem" },
-                        }}
+                      {item.productName}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        marginBottom: 1,
+                        fontSize: "0.85rem",
+                        "@media (max-width: 600px)": { fontSize: "0.8rem" },
+                      }}
                       >
-                        Order
-                      </Button>
-                      <Button
-                        variant="contained"
-                        color="success"
-                        size="small"
-                        sx={{
-                          fontSize: "0.8rem",
-                          "@media (max-width: 600px)": { fontSize: "0.6rem" },
-                          "@media (max-width: 375px)": { fontSize: "0.65rem" },
-                        }}
-                      >
-                        Add to Cart
-                      </Button>
-                    </CardActions>
-                  </Box>
-                </Card>
-              </Grid>
-            ))}
+                      <Rating
+                        name={`rating-${item.id}`}
+                        value={item.rating}
+                        readOnly
+                        size="small" />
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "green",
+                        fontWeight: "bold",
+                        fontSize: "1rem",
+                        "@media (max-width: 600px)": { fontSize: "0.9rem" },
+                      }}
+                    >
+                      ₹ {item.price}
+                    </Typography>
+                  </CardContent>
+                  <CardActions
+                    sx={{
+                      display: "flex",
+                      gap: "6px",
+                      "@media (max-width: 600px)": {
+                        flexDirection: "row",
+                        alignItems: "stretch",
+                      },
+                      "@media (max-width: 1300px) and (min-width: 850px)": {
+                        gap: "1px",
+                      },
+                    }}
+                  >
+                    <Button
+                      variant="outlined"
+                      color="success"
+                      size="small"
+                      sx={{
+                        fontSize: "12px",
+                        "@media (max-width: 1300px) and (min-width: 850px)": {
+                          fontSize: "11px",
+                        },
+                        "@media (max-width: 600px)": { fontSize: "11px" },
+                        "@media (max-width: 450px)": { fontSize: "9px" },
+                      }}
+                    >
+                      Order
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="success"
+                      size="small"
+                      sx={{
+                        fontSize: "12px",
+                        "@media (max-width: 1300px) and (min-width: 850px)": {
+                          fontSize: "11px",
+                        },
+                        "@media (max-width: 600px)": { fontSize: "11px" },
+                        "@media (max-width: 450px)": { fontSize: "9px" },
+                      }}
+                      onClick={() => handleNavigation(item.id)}
+                    >
+                      View Cart
+                    </Button>
+                  </CardActions>
+                </Box>
+              </Card>
         </Grid>
+             ))}
+      </Grid>
       </StyleBox>
-    </>
+    } 
+      </>
+
   );
 };
 
@@ -124,17 +183,16 @@ export default ProductCard;
 
 const StyleBox = styled(Box)({
   marginTop: 0,
-  marginLeft: "250px",
   bgcolor: "#F0F0F0",
-  display: "flex",
-  flexDirection: "row",
+  // display: "flex",
+  // flexDirection: "column",
   "@media (max-width: 1100px)": {
     marginLeft: "0px",
     padding: "10px",
   },
   "@media (max-width: 600px)": {
-    flexDirection: "column",
+    // flexDirection: "column",
     alignItems: "center",
-    // padding: "5px",
   },
+  
 });

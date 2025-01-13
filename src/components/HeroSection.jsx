@@ -17,7 +17,6 @@ import Sidebar from "./Sidebar";
 
 export default function HeroSection() {
 
-
   const settings = {
     dots: true,
     arrows: false,
@@ -29,10 +28,10 @@ export default function HeroSection() {
 
   return (
     <>
-    <Sidebar/>
+    {/* <Sidebar/> */}
+
       <Grid
         sx={{
-          marginLeft: "250px",
           marginTop: '80px',
           backgroundImage: `url(${AgricultureImg})`,
           backgroundSize: "cover",

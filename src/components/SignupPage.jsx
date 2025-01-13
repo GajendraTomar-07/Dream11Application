@@ -12,9 +12,9 @@ export default function SignupPage() {
   return (
     <BoxContainer>
       <GridContent container spacing={2}>
-        <Grid item sm={6}>
+        {/* <Grid item sm={6}>
           <img src={GIFLogin} className='login-img' />
-        </Grid>
+        </Grid> */}
         <Grid item sm={6}>
           <Typography variant="h4">
             Signup Form
@@ -35,7 +35,7 @@ export default function SignupPage() {
 
 const BoxContainer = styled(Box)({
   height: '95vh',
-  background: 'linear-gradient(to top right, #00ff00 0%, #ccff99 100%)',
+  background: 'linear-gradient(to top right,rgb(107, 189, 107) 0%, #ccff99 100%)',
   padding: '15px',
   '@media (min-width: 300px) and (max-width: 800px)': {
     height: 'auto',
@@ -44,7 +44,7 @@ const BoxContainer = styled(Box)({
 })
 
 const GridContent = styled(Grid)({
-  width: '60%',
+  width: '50%',
   margin: '0 auto',
   alignItems: 'center',
   textAlign: 'center',

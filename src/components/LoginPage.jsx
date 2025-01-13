@@ -12,9 +12,9 @@ export default function LoginPage() {
   return (
     <BoxContainer>
       <GridContent container spacing={2}>
-        <Grid item sm={6}>
+        {/* <Grid item sm={6}>
           <img src={GIFLogin} className='login-img' />
-        </Grid>
+        </Grid> */}
         <Grid item sm={6}>
           <Typography variant="h4">
             Login Form
@@ -41,7 +41,7 @@ const BoxContainer = styled(Box)({
 })
 
 const GridContent = styled(Grid)({
-  width: '60%',
+  width: '50%',
   margin: '0 auto',
   alignItems: 'center',
   textAlign: 'center',
