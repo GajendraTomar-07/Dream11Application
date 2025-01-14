@@ -18,8 +18,6 @@ const ProductDetails = ({ data }) => {
   const [cart,setCart] = useState(false);
   const [ids,setIds] = useState(null);
 
-  // const product = Data.find((item) => item.id === parseInt(id));
-
   useEffect(() => {
     if (data) {
       const item = Data.find((product) => product.id === data);

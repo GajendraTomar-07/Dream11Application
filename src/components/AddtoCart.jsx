@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import { Data } from "./Data";
+import MainContainer from "./MainContainer";
 
 const AddtoCart = ({ ids }) => {
   const [addedCart, setAddedCart] = useState([]);
@@ -35,6 +36,8 @@ const AddtoCart = ({ ids }) => {
   }, [addedCart]);
 
   return (
+    <>
+    {/* <MainContainer/> */}
     <Box>
       <GridItem container spacing={3} p={2}>
         {dataShow ? (
@@ -114,6 +117,7 @@ const AddtoCart = ({ ids }) => {
         )}
       </GridItem>
     </Box>
+    </>
   );
 };
 

@@ -14,6 +14,7 @@ import ProductDetails from "./ProductDetails";
 import Products from "./Products";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import IconButton from '@mui/material/IconButton';
+import MainContainer from "./MainContainer";
 
 
 const ProductCard = () => {
@@ -35,12 +36,14 @@ const ProductCard = () => {
       console.log("selected item",data);
     }
   },[data]);
-
+ 
   return (  
     <>
-    { !show ? <>
-    <IconButton onClick={handleBack}><ArrowBackIcon/></IconButton>
-    <ProductDetails data={data}/></> :
+    {/* <MainContainer/> */}
+    { !show ?
+     <><IconButton onClick={handleBack}><ArrowBackIcon/></IconButton>
+    <ProductDetails data={data}/></> 
+    :
     <StyleBox>
         <Grid container spacing={3}  p={1}>
           {Data.map((item) => (

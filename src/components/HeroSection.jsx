@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import OfficialPartner from "./OfficialPartner";
 import Sidebar from "./Sidebar";
+import MainContainer from "./MainContainer";
 
 
 export default function HeroSection() {
@@ -29,6 +30,7 @@ export default function HeroSection() {
   return (
     <>
     {/* <Sidebar/> */}
+    {/* <MainContainer/> */}
 
       <Grid
         sx={{

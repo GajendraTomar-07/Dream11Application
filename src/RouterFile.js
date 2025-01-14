@@ -6,15 +6,18 @@ import SignupPage from './components/SignupPage';
 import Header from './components/Header'
 import Products from './components/Products'
 import AddtoCart from './components/AddtoCart';
+import ProductCard from './components/ProductCard';
+import HeroSection from './components/HeroSection';
 
 export const RouterFile = () => {
   return (
     <Router>
         <Routes>
-            <Route path='/' element={<Header/>}/>
+            <Route path='/' element={<MainContainer/>}/>
             <Route path='/login' element={<LoginPage/>}/>
             <Route path='/signup' element={<SignupPage/>}/>
-            <Route path='/products' element={<Products/>} />
+            <Route path='/heroSection' element={<HeroSection/>}/>
+            <Route path='/products' element={<ProductCard/>} />
             <Route path='/AddtoCart' element={<AddtoCart/>} />
         </Routes>
     </Router>
