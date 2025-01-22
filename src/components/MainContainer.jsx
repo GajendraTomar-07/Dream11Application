@@ -21,7 +21,7 @@ import LoginIcon from "@mui/icons-material/Login";
 import ProductCard from "./ProductCard";
 import AddtoCart from "./AddtoCart";
 import HeroSection from "./HeroSection";
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 const MainContainer = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -33,7 +33,7 @@ const MainContainer = () => {
 
 
   const handleHomePage = () => {
-    navigate("/heroSection");
+    navigate("/herosection");
     // setHome(true);
     // setRefresh(false);
     // setAddCard(false);
@@ -55,7 +55,7 @@ const MainContainer = () => {
   };
 
   const handleAddcart = () => {
-    navigate("/AddtoCart");
+    navigate("/addtocart/:id");
     // setAddCard(true);
     // setRefresh(false);
     // setHome(false);
@@ -287,9 +287,7 @@ const MainContainer = () => {
           }}
         >
           <Outlet/>
-          {/* {window.location.pathname === "/home" && <HeroSection />} */}
-          {/* {window.location.pathname === "/products" && <ProductCard />} */}
-          {/* {window.location.pathname === "/cart" && <AddtoCart />} */}
+         
         </Grid>
       </Grid>
     </>

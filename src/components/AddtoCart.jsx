@@ -1,3 +1,139 @@
+// import React, { useEffect, useState } from "react";
+// import {
+//   Card,
+//   CardContent,
+//   CardMedia,
+//   CardActions,
+//   Grid,
+//   Box,
+//   Typography,
+//   Button,
+//   styled,
+// } from "@mui/material";
+// import Rating from "@mui/material/Rating";
+// import { Data } from "./Data";
+// import MainContainer from "./MainContainer";
+
+// const AddtoCart = ({ ids }) => {
+//   const [addedCart, setAddedCart] = useState([]);
+//   const [dataShow, setDataShow] = useState(false);
+
+//   useEffect(() => {
+//     if (ids) {
+//       const items = Data.find((products) => products.id === ids);
+//       if (items) {
+//         setAddedCart(items);
+//         console.log("addto Card data is item", items);
+//         setDataShow(true);
+//       }
+//     }
+//   }, [ids]);
+
+//   useEffect(() => {
+//     if (addedCart) {
+//       console.log("addto Card data is traveled", addedCart);    
+//     }
+//   }, [addedCart]);
+
+//   return (
+//     <>
+//     {/* <MainContainer/> */}
+//     <Box>
+//       <GridItem container spacing={3} p={2}>
+//         {dataShow ? (
+//           <Grid item xs={12}>
+//             <Card sx={{ display: "flex", alignItems: "center", p: "10px" }}>
+//               <CardMedia
+//                 component="img"
+//                 sx={{ width: 140, height: 150, p: "6px", borderRadius: "12px" }}
+//                 image={addedCart.image}
+//               />
+//               <Box sx={{ flex: 1 , p:'1px'}}>
+//                 <CardContent>
+//                   <Typography gutterBottom>{addedCart.productName}</Typography>
+//                   <Typography  
+//                       sx={{
+//                         marginBottom: 1,
+//                         fontSize: "0.85rem",
+//                         "@media (max-width: 600px)": { fontSize: "0.8rem" },
+//                       }}
+//                   >  
+//                   <Rating value={addedCart.rating || 0} size="small" />
+//                   </Typography>
+//                   <Typography
+//                     variant="h6"
+//                     sx={{ color: "green", fontWeight: "bold" }}
+//                   >
+//                     ₹ {addedCart.price}
+//                   </Typography>
+//                 </CardContent>
+       
+//         <CardActions
+//                            sx={{
+//                              display: "flex",
+//                              gap: "6px",
+//                              "@media (max-width: 600px)": {
+//                                flexDirection: "row",
+//                                alignItems: "stretch",
+//                              },
+//                              "@media (max-width: 1300px) and (min-width: 850px)": {
+//                                gap: "1px",
+//                              },
+//                            }}
+//                          >
+
+//                 <Button variant="contained" color="success" size="small" 
+//                      sx={{
+//                         fontSize: "12px",
+//                         "@media (max-width: 1300px) and (min-width: 850px)": {
+//                           fontSize: "11px",
+//                         },
+//                         "@media (max-width: 600px)": { fontSize: "11px" },
+//                         "@media (max-width: 450px)": { fontSize: "9px" },
+//                       }}
+//                 >
+//                   Proceed to Buy
+//                 </Button>
+//                 <Button variant="contained" color="error" size="small"
+//                     sx={{
+//                         fontSize: "12px",
+//                         "@media (max-width: 1300px) and (min-width: 850px)": {
+//                           fontSize: "11px",
+//                         },
+//                         "@media (max-width: 600px)": { fontSize: "11px" },
+//                         "@media (max-width: 450px)": { fontSize: "9px" },
+//                       }}
+//                 >
+//                   Remove card
+//                 </Button>
+//                 </CardActions>
+//               </Box>
+//             </Card>
+//           </Grid>
+//         ) : (
+//           <Grid item xs={12} >
+//             <Typography>Your Cart is Empty</Typography>
+//           </Grid>
+//         )}
+//       </GridItem>
+//     </Box>
+//     </>
+//   );
+// };
+
+// export default AddtoCart;
+
+
+// const GridItem = styled(Grid)({
+//   width: "50%",
+//   "@media (min-width: 300px) and (max-width: 700px)": {
+//     width: "100%",
+//   },
+//   "@media (min-width: 700px) and (max-width: 1200px)": {
+//     width: "80%",
+//   },
+// });
+// ====================================
 import React, { useEffect, useState } from "react";
 import {
   Card,
@@ -11,38 +147,37 @@ import {
   styled,
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
+import { useParams } from "react-router-dom";
 import { Data } from "./Data";
-import MainContainer from "./MainContainer";
 
-const AddtoCart = ({ ids }) => {
-  const [addedCart, setAddedCart] = useState([]);
-  const [dataShow, setDataShow] = useState(false);
+const AddtoCart = () => {
+  const { id } = useParams(); // Extract the id from the URL
+  const [addedCart, setAddedCart] = useState(null);
 
   useEffect(() => {
-    if (ids) {
-      const items = Data.find((products) => products.id === ids);
-      if (items) {
-        setAddedCart(items);
-        console.log("addto Card data is item", items);
-        setDataShow(true);
+    if (id) {
+      const item = Data.find((product) => product.id === parseInt(id, 10));
+      if (item) {
+        setAddedCart(item);
       }
     }
-  }, [ids]);
+  }, [id]);
 
-  useEffect(() => {
-    if (addedCart) {
-      console.log("addto Card data is traveled", addedCart);    
-    }
-  }, [addedCart]);
+  if (!addedCart) {
+    return <p>Your cart is empty!</p>;
+  }
 
   return (
     <>
-    {/* <MainContainer/> */}
-    <Box>
-      <GridItem container spacing={3} p={2}>
-        {dataShow ? (
-          <Grid item xs={12}>
-            <Card sx={{ display: "flex", alignItems: "center", p: "10px" }}>
+    {/* // <div>
+    //   <h2>{addedCart.productName}</h2>
+    //   <img src={addedCart.image} alt={addedCart.productName} />
+    //   <p>Price: ₹{addedCart.price}</p>
+    //   <p>Rating: {addedCart.rating}</p>
+    // </div> */}
+ <GridItem container spacing={3} p={2}>
+<Grid item xs={12}>
+             <Card sx={{ display: "flex", alignItems: "center", p: "10px" }}>
               <CardMedia
                 component="img"
                 sx={{ width: 140, height: 150, p: "6px", borderRadius: "12px" }}
@@ -110,19 +245,12 @@ const AddtoCart = ({ ids }) => {
               </Box>
             </Card>
           </Grid>
-        ) : (
-          <Grid item xs={12} >
-            <Typography>Your Cart is Empty</Typography>
-          </Grid>
-        )}
-      </GridItem>
-    </Box>
+          </GridItem>
     </>
   );
 };
 
 export default AddtoCart;
-
 
 const GridItem = styled(Grid)({
   width: "50%",

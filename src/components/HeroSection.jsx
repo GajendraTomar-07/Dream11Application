@@ -12,7 +12,6 @@ import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import OfficialPartner from "./OfficialPartner";
-import Sidebar from "./Sidebar";
 import MainContainer from "./MainContainer";
 
 
@@ -34,23 +33,29 @@ export default function HeroSection() {
 
       <Grid
         sx={{
-          marginTop: '80px',
+          // marginTop: '80px',
+          height:'80vh',
           backgroundImage: `url(${AgricultureImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           '@media (max-width: 600px)': {
             backgroundSize: 'auto',
+            height:'auto',
             marginTop: '0px',
             backgroundPosition: 'center top',
           },
           '@media (max-width: 960px)': {
             marginTop: '0px',
+            height:'auto',
+
             backgroundSize: 'cover',
           },
           "@media (max-width: 480px)": {
             backgroundImage: `url(${AgricultureImg})`,
             marginTop: '0px',
+            height:'auto',
+
             backgroundColor: "#050c1f",
           },
         }}
@@ -111,12 +116,15 @@ export default function HeroSection() {
 };
 
 const BoxContainer = styled(Box)({
-  padding: '50px 10px',
+  padding: '180px 10px 10px 10px',
+  
   overflow: 'visible',
   '@media (min-width: 300px) and (max-width: 600px)': {
-    // padding: '100px 10px 10px 10px',
+    padding: '100px 10px 40px 10px',
+    // paddingtop:'10px'
   },
   '@media (min-width: 600px) and (max-width: 1100px)': {
-    // padding: '10px 10px 10px 10px',
+    padding: '50px 10px 30px 10px',
+    // paddingtop:'80px'
   }
 })
